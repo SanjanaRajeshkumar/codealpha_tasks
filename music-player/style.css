@@ -1,0 +1,221 @@
+/* Global font and background */
+body {
+  font-family: 'Jost', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffdee9, #b5fffc);
+  min-height: 100vh; /* allows body to expand */
+}
+
+/* Intro Page */
+.intro {
+  text-align: center;
+  padding: 50px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+.intro h1 {
+  font-size: 2.8em;
+  color: #e60039;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.1em;
+  margin: 20px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.start-btn {
+  background: #e60039;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.start-btn:hover {
+  background: #bf0030;
+}
+
+/* Player Page */
+.player {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 320px;
+  animation: slideUp 0.7s ease;
+  position: relative;
+}
+
+.player h2 {
+  color: #e60039;
+  margin: 10px 0;
+}
+
+.player h4 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  font-size: 22px;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  border: none;
+  background: #e60039;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #bf0030;
+}
+
+#progress, #volume {
+  width: 100%;
+  margin: 10px 0;
+  accent-color: #e60039;
+}
+
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#playlist li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#playlist li:hover {
+  background: #f9f9f9;
+}
+
+#playlist li.active {
+  background-color: #ffe6e6;
+  font-weight: bold;
+}
+
+/* Back button */
+.back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-decoration: none;
+  color: #e60039;
+  font-size: 18px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .player, .intro {
+    width: 90%;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+}
+.song-gallery {
+  text-align: center;
+  padding: 40px;
+}
+
+.song-gallery h1 {
+  color: #e60039;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  padding: 20px;
+  width: 200px;
+  height: 320px; /* 💡 Add this to fix card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ensures spacing is equal */
+  transition: transform 0.3s;
+}
+
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 120px; /* 💡 Set fixed height */
+  object-fit: cover; /* keeps images cropped nicely */
+  border-radius: 10px;
+}
+
+
+.card h3 {
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e60039;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  background: #bf0030;
+}
+.centered-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
