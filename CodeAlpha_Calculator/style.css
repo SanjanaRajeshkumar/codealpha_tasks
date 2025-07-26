@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Animated Gradient Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0072ff, #00c6ff, #2af598, #ffcb05);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional Decorative Shapes */
+.background-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  filter: blur(80px);
+}
+
+.shape1 {
+  width: 300px;
+  height: 300px;
+  background: #00c6ff;
+  top: 10%;
+  left: 15%;
+}
+
+.shape2 {
+  width: 400px;
+  height: 400px;
+  background: #ffcb05;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Calculator Container */
+.calculator {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.calculator h1 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #0072ff;
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 55px;
+  font-size: 26px;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background: #f0f0f0;
+  margin-bottom: 20px;
+  text-align: right;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* Button Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Buttons */
+button {
+  padding: 18px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #eaeaea;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+}
+
+button:hover {
+  background: #4facfe;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.equals {
+  background: #0072ff;
+  color: white;
+}
+
+.equals:hover {
+  background: #0059d1;
+}
+
+.zero {
+  grid-column: span 2;
+}
+#preview {
+  font-size: 16px;
+  min-height: 20px;
+  margin-top: -10px;
+}
