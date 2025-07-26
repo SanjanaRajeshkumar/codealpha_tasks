@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DesignScape — A Modern Visual Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>DesignScape</h1>
+    <p>A Modern Visual Gallery — Interiors, Nature, Abstract & Urban Inspiration</p>
+  </header>
+
+  <div class="filters">
+    <button class="filter-button active" data-filter="all">All</button>
+    <button class="filter-button" data-filter="interior">Interior</button>
+    <button class="filter-button" data-filter="nature">Nature</button>
+    <button class="filter-button" data-filter="abstract">Abstract</button>
+    <button class="filter-button" data-filter="urban">Urban</button>
+  </div>
+
+  <main class="gallery">
+    <div class="card" data-category="interior" onclick="openLightbox(this)">
+      <img src="images/img1.jpg" alt="Brick Interior Lounge" loading="lazy">
+      <div class="overlay"><p>Cozy Lounge</p></div>
+    </div>
+    <div class="card" data-category="nature" onclick="openLightbox(this)">
+      <img src="images/img2.jpg" alt="Mountain Reflection Lake" loading="lazy">
+      <div class="overlay"><p>Mountain Reflections</p></div>
+    </div>
+    <div class="card" data-category="nature" onclick="openLightbox(this)">
+      <img src="images/img3.jpg" alt="Sunset Over Ocean" loading="lazy">
+      <div class="overlay"><p>Sunset Horizon</p></div>
+    </div>
+    <div class="card" data-category="urban" onclick="openLightbox(this)">
+      <img src="images/img4.jpg" alt="Yellow Garden Stairs" loading="lazy">
+      <div class="overlay"><p>Garden Steps</p></div>
+    </div>
+    <div class="card" data-category="nature" onclick="openLightbox(this)">
+      <img src="images/img5.jpg" alt="Green Field Path" loading="lazy">
+      <div class="overlay"><p>Field Walk</p></div>
+    </div>
+    <div class="card" data-category="abstract" onclick="openLightbox(this)">
+      <img src="images/img6.jpg" alt="Abstract Sculpture" loading="lazy">
+      <div class="overlay"><p>Abstract Glow</p></div>
+    </div>
+    <div class="card" data-category="interior" onclick="openLightbox(this)">
+      <img src="images/img7.jpg" alt="Blue Modern Living Room" loading="lazy">
+      <div class="overlay"><p>Blue Interior</p></div>
+    </div>
+    <div class="card" data-category="interior" onclick="openLightbox(this)">
+      <img src="images/img8.jpg" alt="Pink Tone Living Room" loading="lazy">
+      <div class="overlay"><p>Soft Palette</p></div>
+    </div>
+    <div class="card" data-category="abstract" onclick="openLightbox(this)">
+      <img src="images/img9.jpg" alt="3D Pastel Blobs" loading="lazy">
+      <div class="overlay"><p>Creative Car</p></div>
+    </div>
+    <div class="card" data-category="abstract" onclick="openLightbox(this)">
+      <img src="images/img11.jpg" alt="3D Pastel Blobs" loading="lazy">
+      <div class="overlay"><p>Creative Shapes</p></div>
+    </div>
+    <div class="card" data-category="urban" onclick="openLightbox(this)">
+      <img src="images/img10.jpg" alt="Urban Alley Street View" loading="lazy">
+      <div class="overlay"><p>City Stroll</p></div>
+    </div>
+    <div class="card" data-category="urban" onclick="openLightbox(this)">
+      <img src="images/img12.jpg" alt="Urban Alley Street lights" loading="lazy">
+      <div class="overlay"><p>City lights</p></div>
+    </div>
+  </main>
+  <div id="lightbox" onclick="closeLightbox()">
+    <button class="nav prev" onclick="event.stopPropagation(); showPrev()">&#8592;</button>
+    <img id="lightbox-img" />
+    <p class="caption"></p>
+    <button class="nav next" onclick="event.stopPropagation(); showNext()">&#8594;</button>
+
+    <button class="close" onclick="event.stopPropagation(); closeLightbox()">&times;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
